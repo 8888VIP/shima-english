@@ -1,0 +1,102 @@
+{
+  "unit": "Unit 1",
+  "title": "My Classroom",
+  "grade": "Grade 4",
+  "description": "四年级英语教室主题词汇与基础句型练习",
+  "vocabulary": [
+    {
+      "id": "word-1",
+      "english": "classroom",
+      "chinese": "教室",
+      "phonetic": "/ˈklæsruːm/",
+      "example": "We have a new classroom."
+    },
+    {
+      "id": "word-2",
+      "english": "blackboard",
+      "chinese": "黑板",
+      "phonetic": "/ˈblækbɔːrd/",
+      "example": "Look at the blackboard."
+    },
+    {
+      "id": "word-3",
+      "english": "window",
+      "chinese": "窗户",
+      "phonetic": "/ˈwɪndoʊ/",
+      "example": "Open the window, please."
+    },
+    {
+      "id": "word-4",
+      "english": "door",
+      "chinese": "门",
+      "phonetic": "/dɔːr/",
+      "example": "Close the door, please."
+    },
+    {
+      "id": "word-5",
+      "english": "light",
+      "chinese": "灯",
+      "phonetic": "/laɪt/",
+      "example": "Turn on the light."
+    },
+    {
+      "id": "word-6",
+      "english": "picture",
+      "chinese": "图画",
+      "phonetic": "/ˈpɪktʃər/",
+      "example": "The picture is on the wall."
+    },
+    {
+      "id": "word-7",
+      "english": "teacher's desk",
+      "chinese": "讲台",
+      "phonetic": "/ˈtiːtʃərz desk/",
+      "example": "The book is on the teacher's desk."
+    },
+    {
+      "id": "word-8",
+      "english": "floor",
+      "chinese": "地板",
+      "phonetic": "/flɔːr/",
+      "example": "Sweep the floor after class."
+    }
+  ],
+  "dragQuestions": [
+    { "id": "drag-1", "english": "classroom", "chinese": "教室" },
+    { "id": "drag-2", "english": "blackboard", "chinese": "黑板" },
+    { "id": "drag-3", "english": "window", "chinese": "窗户" },
+    { "id": "drag-4", "english": "door", "chinese": "门" },
+    { "id": "drag-5", "english": "light", "chinese": "灯" },
+    { "id": "drag-6", "english": "picture", "chinese": "图画" }
+  ],
+  "quizQuestions": [
+    {
+      "id": "quiz-1",
+      "question": "What does “classroom” mean?",
+      "options": ["教室", "窗户", "地板"],
+      "answer": "教室",
+      "explanation": "classroom 的意思是“教室”。"
+    },
+    {
+      "id": "quiz-2",
+      "question": "Which word means “黑板”?",
+      "options": ["door", "blackboard", "picture"],
+      "answer": "blackboard",
+      "explanation": "blackboard 的意思是“黑板”。"
+    },
+    {
+      "id": "quiz-3",
+      "question": "Choose the correct sentence: 我们有一间新教室。",
+      "options": ["We have a new classroom.", "We has a new classroom.", "We have a new window."],
+      "answer": "We have a new classroom.",
+      "explanation": "主语 We 后使用 have，new classroom 表示“新教室”。"
+    },
+    {
+      "id": "quiz-4",
+      "question": "What does “Turn on the light” mean?",
+      "options": ["打开灯", "关上门", "擦黑板"],
+      "answer": "打开灯",
+      "explanation": "turn on 表示“打开”，light 表示“灯”。"
+    }
+  ]
+}
