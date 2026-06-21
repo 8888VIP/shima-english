@@ -6,6 +6,28 @@ export type VocabularyItem = {
   example: string;
 };
 
+export type KnowledgePoint = {
+  id: string;
+  title: string;
+  explanation: string;
+  example: string;
+  tip: string;
+};
+
+export type SentencePattern = {
+  id: string;
+  english: string;
+  chinese: string;
+  example: string;
+};
+
+export type GrammarFocus = {
+  id: string;
+  rule: string;
+  example: string;
+  commonMistake: string;
+};
+
 export type DragQuestion = {
   id: string;
   english: string;
@@ -21,12 +43,43 @@ export type QuizQuestion = {
 };
 
 export type LearningUnit = {
-  unit: string;
+  id: string;
+  unitNumber: number;
   title: string;
-  grade: string;
+  theme: string;
+  summary: string;
+  learningGoal: string;
+  knowledgePoints: KnowledgePoint[];
   vocabulary: VocabularyItem[];
+  sentencePatterns: SentencePattern[];
+  grammarFocus: GrammarFocus[];
   dragQuestions: DragQuestion[];
   quizQuestions: QuizQuestion[];
+};
+
+export type LearningModule = {
+  id: string;
+  moduleNumber: number;
+  title: string;
+  description: string;
+  units: LearningUnit[];
+};
+
+export type CourseData = {
+  course: string;
+  publisher: string;
+  grade: string;
+  semester: string;
+  note: string;
+  modules: LearningModule[];
+};
+
+export type FollowUpQuestion = {
+  id: string;
+  question: string;
+  options: string[];
+  answer: string;
+  explanation: string;
 };
 
 export type ErrorItem = {
@@ -36,5 +89,6 @@ export type ErrorItem = {
   prompt: string;
   correctAnswer: string;
   userAnswer?: string;
+  followUps?: FollowUpQuestion[];
   createdAt: number;
 };

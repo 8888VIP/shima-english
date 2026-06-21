@@ -15,6 +15,7 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 import { RotateCcw, Trophy } from "lucide-react";
 import type { DragQuestion } from "@/types/learning";
+import { playSound } from "@/lib/sound";
 import { useErrorBookStore } from "@/store/errorBookStore";
 
 type DragChallengeProps = {
@@ -111,8 +112,10 @@ export function DragChallenge({ questions }: DragChallengeProps) {
     }
 
     if (dragged.id === target.id) {
+      playSound(Object.keys(matches).length + 1 === questions.length ? "complete" : "success");
       setMatches((current) => ({ ...current, [target.id]: dragged.english }));
     } else {
+      playSound("error");
       setWrongCount((count) => count + 1);
       addError({
         id: `drag-${dragged.id}-${target.id}`,
@@ -126,6 +129,7 @@ export function DragChallenge({ questions }: DragChallengeProps) {
   };
 
   const reset = () => {
+    playSound("tap");
     setOrderedEnglish(shuffle(questions));
     setMatches({});
     setWrongCount(0);
@@ -136,9 +140,9 @@ export function DragChallenge({ questions }: DragChallengeProps) {
     <section className="rounded-lg bg-white/75 p-5 shadow-sm">
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h2 className="text-2xl font-black text-slate-800">拖拽挑战</h2>
+          <h2 className="text-2xl font-black text-slate-800">知识点匹配挑战</h2>
           <p className="mt-1 text-sm font-medium text-slate-500">
-            把左侧英文拖到右侧对应中文释义，正确后会自动锁定。
+            把右侧场景/规则和左侧正确表达匹配起来，训练考试中最常见的“看情境选句子”。
           </p>
         </div>
         <div className="flex items-center gap-3">
